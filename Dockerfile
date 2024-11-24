@@ -1,5 +1,3 @@
-FROM openjdk:11-jdk-slim
-WORKDIR /app
-COPY VillageVista-1.0-SNAPSHOT.war /app/app.war
+FROM tomcat:9.0-jdk11-temurin
+COPY VillageVista-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/VillageVista.war
 EXPOSE 8080
-CMD ["java", "-jar", "/app/app.war"]
